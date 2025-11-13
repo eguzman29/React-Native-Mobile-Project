@@ -1,5 +1,3 @@
-
-
 import { fireEvent, render, screen, waitFor } from "@testing-library/react-native";
 import * as React from "react";
 import { Alert } from "react-native";

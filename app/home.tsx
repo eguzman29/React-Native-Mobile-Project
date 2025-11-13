@@ -1,5 +1,5 @@
-import React, {useEffect, useState } from "react";
-import {View} from "react-native";
+import React, { useEffect, useState } from "react";
+import { View } from "react-native";
 import styled from "styled-components/native";
 import { getMusicData } from "./api-client";
 import ArtistList from "../components/ArtistList";
@@ -11,21 +11,15 @@ const MainContainer = styled(View)`
 `;
 
 export default function Home() {
-    const [artists, setArtists] = useState<Artist[]>([]);
+  const [artists, setArtists] = useState<Artist[]>([]);
 
   useEffect(() => {
-    getMusicData().then(data => setArtists(data))
-  }, []};
-
-  useEffect{() => {
-    getMusicData().then(data => setArtists(data))
-  }, []};
+    getMusicData().then((data) => setArtists(data));
+  }, []);
 
   return (
     <MainContainer>
-      <artists &&  <ArtistList artists={artists} />
+      {artists && <ArtistList artists={artists} />}
     </MainContainer>
   );
-
-  }}
 }
