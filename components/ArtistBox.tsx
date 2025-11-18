@@ -1,4 +1,5 @@
-import {Artist} from "@/types/artist";
+// components/ArtistBox.tsx
+import {Artist} from "@/types/artist"; // Revisa esta ruta si moviste los archivos
 import React from "react";
 import {Text, View, Image} from 'react-native';
 import styled from "styled-components/native";
@@ -9,17 +10,21 @@ const MainContainer = styled(View)`
     flex-direction: row;
     shadow-color: black;
     shadow-opacity: 0.1;
-    shadow-offset: 1px-2px;
+    shadow-offset:  0px 2px;
+    shadow-radius: 2px;
+    elevation: 2;
     `;
 
 
 const ImageContainer = styled(Image)`
     width: 150px;
     height: 150px;
-    rezide-mode: contain;
+    /* ⬇️ CAMBIO: Error tipográfico, era 'rezide-mode' */
+    resize-mode: contain;
 `;
 
-const Info = styled(Image)`
+/* ⬇️ CAMBIO: Debía ser styled(View) para poder contener el texto 'Name' */
+const Info = styled(View)` 
 flex: 1;
 flex-direction: column;
 align-items: center;
