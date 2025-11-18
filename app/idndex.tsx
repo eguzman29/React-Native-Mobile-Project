@@ -117,7 +117,7 @@ export default function Index() {
         />
 
         <Button title="Login" onPress={handlePress} />
-        <Button title="Registro" onPress={onRegister} />
+        <Button title="register" onPress={onRegister} />
       </View>
     </View>
   );
