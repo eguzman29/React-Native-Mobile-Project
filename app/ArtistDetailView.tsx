@@ -52,10 +52,14 @@ export default function ArtistDetailView() {
                   igual que en la lista 
                 */}
                 {artistImage ? (
-                    <ArtistImage source={{ uri: artistImage }} />
+                    <ArtistImage 
+                        testID="artist-detail-image"
+                        source={{ uri: artistImage }} />
                 ) : (
                     // Si no hay imagen, mostramos un 'placeholder'
-                    <ArtistImage style={{ backgroundColor: '#eee' }} />
+                    <ArtistImage 
+                        testID="placeholder-image"
+                        style={{ backgroundColor: '#eee' }} />
                 )}
                 <ArtistName>{artistName}</ArtistName>
             </Card>
